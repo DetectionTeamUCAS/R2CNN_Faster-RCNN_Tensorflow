@@ -3,8 +3,13 @@
 ## [DOTA](https://captain-whu.github.io/DOTA/index.html) test results      
 ![1](DOTA.png)
 
-## Comparison
+## Download Model
+1、please download [resnet50_v1](http://download.tensorflow.org/models/resnet_v1_50_2016_08_28.tar.gz)、[resnet101_v1](http://download.tensorflow.org/models/resnet_v1_101_2016_08_28.tar.gz) pre-trained models on Imagenet, place it to data/pretrained_weights.     
+2、please download [mobilenet_v2](https://storage.googleapis.com/mobilenet_v2/checkpoints/mobilenet_v2_1.0_224.tgz) pre-trained model on Imagenet, place it to data/pretrained_weights/mobilenet.     
+3、please download resnet101_v1 trained model by this project, place it to output/trained_weights.   
 
+
+## Comparison
 | Approaches | mAP | PL | BD | BR | GTF | SV | LV | SH | TC | BC | ST | SBF | RA | HA | SP | HC |
 |------------|:---:|:--:|:--:|:--:|:---:|:--:|:--:|:--:|:--:|:--:|:--:|:---:|:--:|:--:|:--:|:--:|
 |[SSD inception-v2](https://link.springer.com/chapter/10.1007%2F978-3-319-46448-0_2)|17.84|41.06|24.31|4.55|17.1|15.93|7.72|13.21|39.96|12.05|46.88|9.09|30.82|1.36|3.5|0.0|
