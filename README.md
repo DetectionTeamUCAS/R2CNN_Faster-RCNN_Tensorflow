@@ -23,3 +23,23 @@ This project is based on [Faster-RCNN](), and completed by [YangXue](https://git
 |[FR-H](https://ieeexplore.ieee.org/abstract/document/7485869/)|39.95|49.74|64.22|9.38|56.66|19.18|14.17|9.51|61.61|65.47|57.52|51.36|49.41|20.8|45.84|24.38|
 |[FR-O](https://arxiv.org/abs/1711.10398)|54.13|79.42|**77.13**|17.7|64.05|35.3|38.02|37.16|89.41|**69.64**|59.28|50.3|52.91|47.89|47.4|46.3|
 |Ours|**60.67**|**80.94**|65.75|**35.34**|**67.44**|**59.92**|**50.91**|**55.81**|**90.67**|66.92|**72.39**|**55.06**|**52.23**|**55.14**|**53.35**|**48.22**|
+
+## demo
+```   
+python demo.py --src_folder='/PATH/TO/DOTA/IMAGES_ORIGINAL/' 
+               --image_ext='.png' 
+               --des_folder='/PATH/TO/SAVE/RESULTS/' 
+               --save_res=True
+```
+
+## eval
+```  
+python eval.py --img_dir='/PATH/TO/DOTA/IMAGES_CROP/' 
+               --image_ext='.png' 
+               --test_annotation_path='/PATH/TO/TEST/ANNOTATION/'
+```
+
+## inference
+```  
+python eval.py --data_dir='/PATH/TO/DOTA/IMAGES_CROP/'
+```
