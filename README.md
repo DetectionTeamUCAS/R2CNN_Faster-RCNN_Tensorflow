@@ -41,5 +41,10 @@ python eval.py --img_dir='/PATH/TO/DOTA/IMAGES_CROP/'
 
 ## inference
 ```  
-python eval.py --data_dir='/PATH/TO/DOTA/IMAGES_CROP/'
+python inference.py --data_dir='/PATH/TO/DOTA/IMAGES_CROP/'
+```
+
+## train
+```  
+python train.py
 ```
