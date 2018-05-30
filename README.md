@@ -1,7 +1,8 @@
 # R2CNN_Faster-RCNN_Tensorflow
 
 ## Abstract
-This is a tensorflow re-implementation of [R<sup>2</sup>CNN: Rotational Region CNN for Orientation Robust Scene Text Detection](https://arxiv.org/abs/1706.09579). It should be noted that we did not re-implementate exactly as the paper and just adopted its idea.
+This is a tensorflow re-implementation of [R<sup>2</sup>CNN: Rotational Region CNN for Orientation Robust Scene Text Detection](https://arxiv.org/abs/1706.09579).      
+It should be noted that we did not re-implementate exactly as the paper and just adopted its idea.     
 
 This project is based on [Faster-RCNN](), and completed by [YangXue](https://github.com/yangxue0827) and [YangJirui](https://github.com/yangJirui).
 
@@ -24,7 +25,7 @@ This project is based on [Faster-RCNN](), and completed by [YangXue](https://git
 |[FR-O](https://arxiv.org/abs/1711.10398)|54.13|79.42|**77.13**|17.7|64.05|35.3|38.02|37.16|89.41|**69.64**|59.28|50.3|52.91|47.89|47.4|46.3|
 |Ours|**60.67**|**80.94**|65.75|**35.34**|**67.44**|**59.92**|**50.91**|**55.81**|**90.67**|66.92|**72.39**|**55.06**|**52.23**|**55.14**|**53.35**|**48.22**|
 
-## demo
+## Demo
 ```   
 python demo.py --src_folder='/PATH/TO/DOTA/IMAGES_ORIGINAL/' 
                --image_ext='.png' 
@@ -32,19 +33,19 @@ python demo.py --src_folder='/PATH/TO/DOTA/IMAGES_ORIGINAL/'
                --save_res=True
 ```
 
-## eval
+## Eval
 ```  
 python eval.py --img_dir='/PATH/TO/DOTA/IMAGES_CROP/' 
                --image_ext='.png' 
                --test_annotation_path='/PATH/TO/TEST/ANNOTATION/'
 ```
 
-## inference
+## Inference
 ```  
 python inference.py --data_dir='/PATH/TO/DOTA/IMAGES_CROP/'
 ```
 
-## train
+## Train
 ```  
 python train.py
 ```
