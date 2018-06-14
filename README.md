@@ -6,6 +6,22 @@ It should be noted that we did not re-implementate exactly as the paper and just
 
 This project is based on [Faster-RCNN](), and completed by [YangXue](https://github.com/yangxue0827) and [YangJirui](https://github.com/yangJirui).
 
+## Citation
+Some relevant achievements based on this code.     
+
+    @article{https://arxiv.org/abs/1806.04828
+        Author = {Xue Yang, Hao Sun, Xian Sun, Menglong Yan, Zhi Guo, Kun Fu},
+        Title = {Position Detection and Direction Prediction for Arbitrary-Oriented Ships via Multiscale Rotation Region Convolutional Neural Network},
+        Year = {2018}
+    } 
+    
+     @article{yangxue_r-dfpn:http://www.mdpi.com/2072-4292/10/1/132 or https://arxiv.org/abs/1806.04331
+        Author = {Xue Yang, Hao Sun, Kun Fu, Jirui Yang, Xian Sun, Menglong Yan and Zhi Guo},
+        Title = {{R-DFPN}: Automatic Ship Detection in Remote Sensing Images from Google Earth of Complex Scenes Based on Multiscale Rotation Dense Feature Pyramid Networks},
+        Journal = {Published in remote sensing},
+        Year = {2018}
+    }
+
 ## [DOTA](https://captain-whu.github.io/DOTA/index.html) test results      
 ![1](DOTA.png)
 
