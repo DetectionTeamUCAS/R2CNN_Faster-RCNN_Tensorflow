@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="85093494-cdc4-4fa3-9e01-36713ee99079" name="R2CNN_demo" url="http://192.168.6.23">
+        <fileTransfer host="192.168.6.23" port="22" rootFolder="/mnt/USBC/gx/Detection/R2CNN_Tensorflow_demo" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
