@@ -6,6 +6,9 @@ It should be noted that we did not re-implementate exactly as the paper and just
 
 This project is based on [Faster-RCNN](), and completed by [YangXue](https://github.com/yangxue0827) and [YangJirui](https://github.com/yangJirui).
 
+## Status
+**Demo available** !
+
 ## Citation
 Some relevant achievements based on this code.     
 
@@ -28,7 +31,7 @@ Some relevant achievements based on this code.
 ## Download Model
 1、please download [resnet50_v1](http://download.tensorflow.org/models/resnet_v1_50_2016_08_28.tar.gz)、[resnet101_v1](http://download.tensorflow.org/models/resnet_v1_101_2016_08_28.tar.gz) pre-trained models on Imagenet, place it to data/pretrained_weights.     
 2、please download [mobilenet_v2](https://storage.googleapis.com/mobilenet_v2/checkpoints/mobilenet_v2_1.0_224.tgz) pre-trained model on Imagenet, place it to data/pretrained_weights/mobilenet.     
-3、please download resnet101_v1 trained model by this project, place it to output/trained_weights.   
+3、please download [trained model]() by this project, place it to output/trained_weights.   
 
 
 ## Comparison
@@ -47,6 +50,7 @@ python demo.py --src_folder='/PATH/TO/DOTA/IMAGES_ORIGINAL/'
                --image_ext='.png' 
                --des_folder='/PATH/TO/SAVE/RESULTS/' 
                --save_res=True
+			   --gpu='0'
 ```
 
 ## Eval
