@@ -50,7 +50,7 @@ python demo.py --src_folder='/PATH/TO/DOTA/IMAGES_ORIGINAL/'
                --image_ext='.png' 
                --des_folder='/PATH/TO/SAVE/RESULTS/' 
                --save_res=True
-			   --gpu='0'
+               --gpu='0'
 ```
 
 ## Eval
