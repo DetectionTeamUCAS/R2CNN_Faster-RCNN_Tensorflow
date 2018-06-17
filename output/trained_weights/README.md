@@ -1,1 +1,1 @@
-Please download [trained model]() by this project, place it here.
+Please download [trained model](https://github.com/DetectionTeamUCAS/Models/R2CNN_Faster-RCNN_Tensorflow) by this project, then put it here.
