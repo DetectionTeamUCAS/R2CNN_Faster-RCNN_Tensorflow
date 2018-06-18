@@ -41,13 +41,13 @@ Some relevant achievements based on this code.
 ## Requirements
 1、tensorflow >= 1.2     
 2、cuda8.0     
-3、Python2.7 (recommend)    
+3、python2.7 (anaconda2 recommend)    
 4、[opencv(cv2)](https://pypi.org/project/opencv-python/)    
 
 ## Download Model
 1、please download [resnet50_v1](http://download.tensorflow.org/models/resnet_v1_50_2016_08_28.tar.gz)、[resnet101_v1](http://download.tensorflow.org/models/resnet_v1_101_2016_08_28.tar.gz) pre-trained models on Imagenet, place it to data/pretrained_weights.     
 2、please download [mobilenet_v2](https://storage.googleapis.com/mobilenet_v2/checkpoints/mobilenet_v2_1.0_224.tgz) pre-trained model on Imagenet, place it to data/pretrained_weights/mobilenet.     
-3、please download [trained model](https://github.com/DetectionTeamUCAS/Models/R2CNN_Faster-RCNN_Tensorflow) by this project, place it to output/trained_weights.   
+3、please download [trained model](https://github.com/DetectionTeamUCAS/Models/R2CNN_Faster-RCNN_Tensorflow) by this project, put it to output/trained_weights.   
 
 ## Demo
 ```   
