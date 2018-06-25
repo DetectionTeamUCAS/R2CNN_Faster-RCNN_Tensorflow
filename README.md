@@ -39,7 +39,8 @@ Some relevant achievements based on this code.
 |Ours|**60.67**|**80.94**|65.75|**35.34**|**67.44**|**59.92**|**50.91**|**55.81**|**90.67**|66.92|**72.39**|**55.06**|52.23|**55.14**|**53.35**|**48.22**|
 
 ## Face Detection
-![2](face.tif)
+Environment: NVIDIA GeForce GTX 1060
+![2](face.gif)
 
 ## Requirements
 1、tensorflow >= 1.2     

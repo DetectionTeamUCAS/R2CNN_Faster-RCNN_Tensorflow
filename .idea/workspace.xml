@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df1f92ba-377d-4258-b280-e0c9579e272b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/networks/mobilenet/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/networks/mobilenet/conv_blocks.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/networks/mobilenet/mobilenet.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/networks/mobilenet/mobilenet_v2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/networks/mobilenet/mobilenet_v2_test.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/libs/networks/mobilenet/README.md" afterPath="$PROJECT_DIR$/libs/configs/cfgs_DOTA_res101_v3.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Faster-RCNN_Tensorflow.iml" afterPath="$PROJECT_DIR$/.idea/Faster-RCNN_Tensorflow.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/io/read_tfrecord.py" afterPath="$PROJECT_DIR$/data/io/read_tfrecord.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help_utils/tools.py" afterPath="$PROJECT_DIR$/help_utils/tools.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/configs/cfgs.py" afterPath="$PROJECT_DIR$/libs/configs/cfgs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/label_name_dict/label_dict.py" afterPath="$PROJECT_DIR$/libs/label_name_dict/label_dict.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/networks/mobilenet_v2.py" afterPath="$PROJECT_DIR$/libs/networks/mobilenet_v2.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
