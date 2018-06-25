@@ -8,10 +8,10 @@ if cfgs.DATASET_NAME == 'ship':
         'back_ground': 0,
         'ship': 1
     }
-elif cfgs.DATASET_NAME == 'aeroplane':
+elif cfgs.DATASET_NAME == 'FDDB':
     NAME_LABEL_MAP = {
         'back_ground': 0,
-        'aeroplane': 1
+        'face': 1
     }
 elif cfgs.DATASET_NAME == 'icdar':
     NAME_LABEL_MAP = {

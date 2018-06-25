@@ -38,6 +38,9 @@ Some relevant achievements based on this code.
 |[FR-O](https://arxiv.org/abs/1711.10398)|54.13|79.42|**77.13**|17.7|64.05|35.3|38.02|37.16|89.41|**69.64**|59.28|50.3|**52.91**|47.89|47.4|46.3|
 |Ours|**60.67**|**80.94**|65.75|**35.34**|**67.44**|**59.92**|**50.91**|**55.81**|**90.67**|66.92|**72.39**|**55.06**|52.23|**55.14**|**53.35**|**48.22**|
 
+## Face Detection
+![2](face.tif)
+
 ## Requirements
 1、tensorflow >= 1.2     
 2、cuda8.0     
@@ -45,11 +48,15 @@ Some relevant achievements based on this code.
 4、[opencv(cv2)](https://pypi.org/project/opencv-python/)    
 
 ## Download Model
-1、please download [resnet50_v1](http://download.tensorflow.org/models/resnet_v1_50_2016_08_28.tar.gz)、[resnet101_v1](http://download.tensorflow.org/models/resnet_v1_101_2016_08_28.tar.gz) pre-trained models on Imagenet, place it to data/pretrained_weights.     
-2、please download [mobilenet_v2](https://storage.googleapis.com/mobilenet_v2/checkpoints/mobilenet_v2_1.0_224.tgz) pre-trained model on Imagenet, place it to data/pretrained_weights/mobilenet.     
+1、please download [resnet50_v1](http://download.tensorflow.org/models/resnet_v1_50_2016_08_28.tar.gz)、[resnet101_v1](http://download.tensorflow.org/models/resnet_v1_101_2016_08_28.tar.gz) pre-trained models on Imagenet, put it to data/pretrained_weights.     
+2、please download [mobilenet_v2](https://storage.googleapis.com/mobilenet_v2/checkpoints/mobilenet_v2_1.0_224.tgz) pre-trained model on Imagenet, put it to data/pretrained_weights/mobilenet.     
 3、please download [trained model](https://github.com/DetectionTeamUCAS/Models/tree/master/R2CNN_Faster-RCNN_Tensorflow) by this project, put it to output/trained_weights.   
 
-## Demo
+## Demo(available)
+
+**Select a configuration file in the folder (libs/configs/) and copy its contents into cfgs.py, then download the corresponding [weights](https://github.com/DetectionTeamUCAS/Models/tree/master/R2CNN_Faster-RCNN_Tensorflow).**      
+
+### DOTA:  
 ```   
 python demo.py --src_folder='/PATH/TO/DOTA/IMAGES_ORIGINAL/' 
                --image_ext='.png' 
@@ -58,14 +65,19 @@ python demo.py --src_folder='/PATH/TO/DOTA/IMAGES_ORIGINAL/'
                --gpu='0'
 ```
 
-## Eval
+### Face:
+```   
+python camera_demo.py --gpu='0'     
+```
+
+## Eval(available)
 ```  
-python eval.py --img_dir='/PATH/TO/DOTA/IMAGES_CROP/' 
+python eval.py --img_dir='/PATH/TO/DOTA/IMAGES/' 
                --image_ext='.png' 
                --test_annotation_path='/PATH/TO/TEST/ANNOTATION/'
 ```
 
-## Inference
+## Inference(available)
 ```  
 python inference.py --data_dir='/PATH/TO/DOTA/IMAGES_CROP/'
 ```

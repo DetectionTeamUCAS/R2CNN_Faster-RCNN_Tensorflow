@@ -5,14 +5,14 @@ import tensorflow as tf
 
 
 # ------------------------------------------------
-VERSION = 'FasterRCNN_20180515_DOTA_v3'
-NET_NAME = 'resnet_v1_101'
+VERSION = 'FasterRCNN_20180623_FDDB_mobile_v1'
+NET_NAME = 'MobilenetV2'  # ''resnet_v1_101' 'MobilenetV2'
 ADD_BOX_IN_TENSORBOARD = True
 # ---------------------------------------- System_config
 ROOT_PATH = os.path.abspath('../')
 print(20*"++--")
 print(ROOT_PATH)
-GPU_GROUP = "2"
+GPU_GROUP = "0"
 SHOW_TRAIN_INFO_INTE = 10
 SMRY_ITER = 100
 SAVE_WEIGHTS_INTE = 2000
@@ -40,9 +40,9 @@ test_annotate_path = '/mnt/USBB/gx/DOTA/DOTA_clip/val/labeltxt'
 RESTORE_FROM_RPN = False
 IS_FILTER_OUTSIDE_BOXES = True
 ROTATE_NMS_USE_GPU = False
-FIXED_BLOCKS = 2  # allow 0~3
+FIXED_BLOCKS = 1  # allow 0~3
 
-RPN_LOCATION_LOSS_WEIGHT = 1 / 7
+RPN_LOCATION_LOSS_WEIGHT = 1. / 2
 RPN_CLASSIFICATION_LOSS_WEIGHT = 2.0
 
 FAST_RCNN_LOCATION_LOSS_WEIGHT = 4.0
@@ -58,14 +58,14 @@ EPSILON = 1e-5
 MOMENTUM = 0.9
 LR = 0.0003  # 0.0003
 DECAY_STEP = [60000, 120000]  # 90000, 120000
-MAX_ITERATION = 1000000
+MAX_ITERATION = 200000
 
 # -------------------------------------------- Data_preprocess_config
-DATASET_NAME = 'DOTA'  # 'ship', 'spacenet', 'pascal', 'coco'
+DATASET_NAME = 'FDDB'  # 'ship', 'spacenet', 'pascal', 'coco','FDDB','WIDER'
 PIXEL_MEAN = [123.68, 116.779, 103.939]  # R, G, B. In tf, channel is RGB. In openCV, channel is BGR
-IMG_SHORT_SIDE_LEN = 800
+IMG_SHORT_SIDE_LEN = 600
 IMG_MAX_LENGTH = 1000
-CLASS_NUM = 15
+CLASS_NUM = 1
 
 # --------------------------------------------- Network_config
 BATCH_SIZE = 1
@@ -78,7 +78,7 @@ WEIGHT_DECAY = 0.0001
 BASE_ANCHOR_SIZE_LIST = [256]  # can be modified
 ANCHOR_STRIDE = [16]  # can not be modified in most situations
 ANCHOR_SCALES = [0.0625, 0.125, 0.25, 0.5, 1., 2.0]  # [4, 8, 16, 32]
-ANCHOR_RATIOS = [1, 1 / 2, 2., 1 / 3., 3., 5., 1 / 4., 4., 1 / 5., 6., 1 / 6., 7., 1 / 7.]
+ANCHOR_RATIOS = [1, 1 / 2, 2.]
 ROI_SCALE_FACTORS = [10., 10., 5.0, 5.0, 5.0]
 ANCHOR_SCALE_FACTORS = None
 
@@ -95,8 +95,8 @@ RPN_NMS_IOU_THRESHOLD = 0.7
 RPN_TOP_K_NMS_TRAIN = 12000
 RPN_MAXIMUM_PROPOSAL_TARIN = 2000
 
-RPN_TOP_K_NMS_TEST = 10000  # 5000
-RPN_MAXIMUM_PROPOSAL_TEST = 300  # 300
+RPN_TOP_K_NMS_TEST = 100  # 5000
+RPN_MAXIMUM_PROPOSAL_TEST = 20  # 300
 
 
 # -------------------------------------------Fast-RCNN config
