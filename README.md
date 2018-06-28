@@ -4,7 +4,7 @@
 This is a tensorflow re-implementation of [R<sup>2</sup>CNN: Rotational Region CNN for Orientation Robust Scene Text Detection](https://arxiv.org/abs/1706.09579).      
 It should be noted that we did not re-implementate exactly as the paper and just adopted its idea.     
 
-This project is based on [Faster-RCNN](), and completed by [YangXue](https://github.com/yangxue0827) and [YangJirui](https://github.com/yangJirui).
+This project is based on [Faster-RCNN](https://github.com/DetectionTeamUCAS/Faster-RCNN_Tensorflow), and completed by [YangXue](https://github.com/yangxue0827) and [YangJirui](https://github.com/yangJirui).
 
 ## Status
 **Demo available** !
