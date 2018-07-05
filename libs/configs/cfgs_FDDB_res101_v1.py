@@ -27,14 +27,13 @@ if NET_NAME.startswith('resnet'):
 elif NET_NAME.startswith('MobilenetV2'):
     weights_name = 'mobilenet/mobilenet_v2_1.0_224'
 else:
-    raise NotImplementedError
+    raise Exception('net name must in [resnet_v1_101, resnet_v1_50, MobilenetV2]')
 
 PRETRAINED_CKPT = ROOT_PATH + '/data/pretrained_weights/' + weights_name + '.ckpt'
 TRAINED_CKPT = os.path.join(ROOT_PATH, 'output/trained_weights')
 
 EVALUATE_H_DIR = ROOT_PATH + '/output' + '/evaluate_h_result_pickle/' + VERSION
 EVALUATE_R_DIR = ROOT_PATH + '/output' + '/evaluate_r_result_pickle/' + VERSION
-test_annotate_path = '/mnt/USBB/gx/DOTA/DOTA_clip/val/labeltxt'
 
 # ------------------------------------------ Train config
 RESTORE_FROM_RPN = False
@@ -73,7 +72,6 @@ INITIALIZER = tf.random_normal_initializer(mean=0.0, stddev=0.01)
 BBOX_INITIALIZER = tf.random_normal_initializer(mean=0.0, stddev=0.001)
 WEIGHT_DECAY = 0.0001
 
-
 # ---------------------------------------------Anchor config
 BASE_ANCHOR_SIZE_LIST = [256]  # can be modified
 ANCHOR_STRIDE = [16]  # can not be modified in most situations
@@ -81,7 +79,6 @@ ANCHOR_SCALES = [0.0625, 0.125, 0.25, 0.5, 1., 2.0]  # [4, 8, 16, 32]
 ANCHOR_RATIOS = [1, 1 / 2, 2.]
 ROI_SCALE_FACTORS = [10., 10., 5.0, 5.0, 5.0]
 ANCHOR_SCALE_FACTORS = None
-
 
 # --------------------------------------------RPN config
 KERNEL_SIZE = 3
@@ -97,7 +94,6 @@ RPN_MAXIMUM_PROPOSAL_TARIN = 2000
 
 RPN_TOP_K_NMS_TEST = 100  # 5000
 RPN_MAXIMUM_PROPOSAL_TEST = 20 # 300
-
 
 # -------------------------------------------Fast-RCNN config
 ROI_SIZE = 14

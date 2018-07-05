@@ -27,14 +27,13 @@ if NET_NAME.startswith('resnet'):
 elif NET_NAME.startswith('MobilenetV2'):
     weights_name = 'mobilenet/mobilenet_v2_1.0_224'
 else:
-    raise NotImplementedError
+    raise Exception('net name must in [resnet_v1_101, resnet_v1_50, MobilenetV2]')
 
 PRETRAINED_CKPT = ROOT_PATH + '/data/pretrained_weights/' + weights_name + '.ckpt'
 TRAINED_CKPT = os.path.join(ROOT_PATH, 'output/trained_weights')
 
 EVALUATE_H_DIR = ROOT_PATH + '/output' + '/evaluate_h_result_pickle/' + VERSION
 EVALUATE_R_DIR = ROOT_PATH + '/output' + '/evaluate_r_result_pickle/' + VERSION
-test_annotate_path = '/mnt/USBB/gx/DOTA/DOTA_clip/val/labeltxt'
 
 # ------------------------------------------ Train config
 RESTORE_FROM_RPN = False
