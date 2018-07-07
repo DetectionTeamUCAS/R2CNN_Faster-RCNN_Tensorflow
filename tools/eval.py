@@ -18,7 +18,7 @@ from libs.configs import cfgs
 from libs.networks import build_whole_network
 from libs.val_libs import voc_eval, voc_eval_r
 from libs.box_utils import draw_box_in_img
-from libs.label_name_dict.pascal_dict import LABEl_NAME_MAP, NAME_LABEL_MAP
+from libs.label_name_dict.label_dict import LABEL_NAME_MAP, NAME_LABEL_MAP
 from help_utils import tools
 
 os.environ["CUDA_VISIBLE_DEVICES"] = '1'

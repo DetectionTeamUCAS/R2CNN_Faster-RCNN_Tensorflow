@@ -7,7 +7,7 @@ from __future__ import print_function
 import tensorflow as tf
 import numpy as np
 import cv2
-from libs.label_name_dict.label_dict import LABEl_NAME_MAP
+from libs.label_name_dict.label_dict import LABEL_NAME_MAP
 
 from libs.configs import cfgs
 
@@ -162,7 +162,7 @@ def draw_boxes_with_categories_and_scores(img_batch, boxes, labels, scores):
                               pt2=(xmin+120, ymin+15),
                               color=color,
                               thickness=-1)
-                category = LABEl_NAME_MAP[label]
+                category = LABEL_NAME_MAP[label]
                 cv2.putText(img,
                             text=category+": "+str(score),
                             org=(xmin, ymin+10),
@@ -215,7 +215,7 @@ def draw_boxes_with_categories_and_scores_rotate(img_batch, boxes, labels, score
                               pt2=(x_c+120, y_c+15),
                               color=color,
                               thickness=-1)
-                category = LABEl_NAME_MAP[label]
+                category = LABEL_NAME_MAP[label]
                 cv2.putText(img,
                             text=category+": "+str(score),
                             org=(x_c, y_c+10),

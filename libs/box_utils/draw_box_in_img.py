@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 import cv2
 
 from libs.configs import cfgs
-from libs.label_name_dict.label_dict import LABEl_NAME_MAP
+from libs.label_name_dict.label_dict import LABEL_NAME_MAP
 NOT_DRAW_BOXES = 0
 ONLY_DRAW_BOXES = -1
 ONLY_DRAW_BOXES_WITH_SCORES = -2
@@ -82,7 +82,7 @@ def draw_label_with_scores(draw_obj, box, label, score, color):
     draw_obj.rectangle(xy=[x, y, x + 60, y + 10],
                        fill=color)
 
-    txt = LABEl_NAME_MAP[label] + ':' + str(round(score, 2))
+    txt = LABEL_NAME_MAP[label] + ':' + str(round(score, 2))
     draw_obj.text(xy=(x, y),
                   text=txt,
                   fill='black',
@@ -142,7 +142,7 @@ def draw_box_cv(img, boxes, labels, scores):
                           color=color,
                           thickness=2)
 
-            category = LABEl_NAME_MAP[label]
+            category = LABEL_NAME_MAP[label]
 
             # if scores is not None:
             #     cv2.rectangle(img,
@@ -200,7 +200,7 @@ def draw_rotate_box_cv(img, boxes, labels, scores):
             rect = np.int0(rect)
             cv2.drawContours(img, [rect], -1, color, 2)
 
-            category = LABEl_NAME_MAP[label]
+            category = LABEL_NAME_MAP[label]
 
             # if scores is not None:
             #     cv2.rectangle(img,

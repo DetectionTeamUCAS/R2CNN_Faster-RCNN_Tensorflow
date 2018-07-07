@@ -71,4 +71,4 @@ def get_label_name_map():
         reverse_dict[label] = name
     return reverse_dict
 
-LABEl_NAME_MAP = get_label_name_map()
+LABEL_NAME_MAP = get_label_name_map()

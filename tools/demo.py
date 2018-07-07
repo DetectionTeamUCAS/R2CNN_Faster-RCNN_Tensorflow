@@ -167,7 +167,7 @@ def inference(det_net, file_paths, des_folder, h_len, w_len, h_overlap, w_overla
 
                 inx = nms_rotate.nms_rotate_cpu(boxes=np.array(tmp_boxes_r),
                                                 scores=np.array(tmp_score_r),
-                                                iou_threshold=threshold[LABEl_NAME_MAP[sub_class]],
+                                                iou_threshold=threshold[LABEL_NAME_MAP[sub_class]],
                                                 max_output_size=500)
 
                 box_res_rotate_.extend(np.array(tmp_boxes_r)[inx])
@@ -208,7 +208,7 @@ def inference(det_net, file_paths, des_folder, h_len, w_len, h_overlap, w_overla
                                                                                  score_res_rotate_[i],
                                                                                  rbox[0], rbox[1], rbox[2], rbox[3],
                                                                                  rbox[4], rbox[5], rbox[6], rbox[7],)
-                write_handle[LABEl_NAME_MAP[label_res_rotate_[i]]].write(command)
+                write_handle[LABEL_NAME_MAP[label_res_rotate_[i]]].write(command)
 
             for sub_class in CLASS_DOTA:
                 if sub_class == 'back_ground':
