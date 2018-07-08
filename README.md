@@ -53,6 +53,12 @@ Environment: NVIDIA GeForce GTX 1060
 2、please download [mobilenet_v2](https://storage.googleapis.com/mobilenet_v2/checkpoints/mobilenet_v2_1.0_224.tgz) pre-trained model on Imagenet, put it to data/pretrained_weights/mobilenet.     
 3、please download [trained model](https://github.com/DetectionTeamUCAS/Models/tree/master/R2CNN_Faster-RCNN_Tensorflow) by this project, put it to output/trained_weights.   
 
+## Compile
+```  
+cd $PATH_ROOT/libs/box_utils/cython_utils
+python setup.py build_ext --inplace
+```
+
 ## Demo(available)
 
 **Select a configuration file in the folder (libs/configs/) and copy its contents into cfgs.py, then download the corresponding [weights](https://github.com/DetectionTeamUCAS/Models/tree/master/R2CNN_Faster-RCNN_Tensorflow).**      
