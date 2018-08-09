@@ -165,10 +165,17 @@ def inference(det_net, file_paths, des_folder, h_len, w_len, h_overlap, w_overla
                 tmp[:, 0:-1] = tmp_boxes_r
                 tmp[:, -1] = np.array(tmp_score_r)
 
-                inx = nms_rotate.nms_rotate_cpu(boxes=np.array(tmp_boxes_r),
-                                                scores=np.array(tmp_score_r),
-                                                iou_threshold=threshold[LABEL_NAME_MAP[sub_class]],
-                                                max_output_size=500)
+                try:
+                    inx = nms_rotate.nms_rotate_cpu(boxes=np.array(tmp_boxes_r),
+                                                    scores=np.array(tmp_score_r),
+                                                    iou_threshold=threshold[LABEl_NAME_MAP[sub_class]],
+                                                    max_output_size=500)
+                except:
+                    # Note: the IoU of two same rectangles is 0, which is calculated by rotate_gpu_nms
+                    jitter = np.zeros([tmp_boxes_r.shape[0], tmp_boxes_r.shape[1] + 1])
+                    jitter[:, 0] += np.random.rand(tmp.shape[0], 1) / 1000
+                    inx = rotate_gpu_nms(np.array(tmp, np.float32) + jitter,
+                                         float(threshold[LABEl_NAME_MAP[sub_class]]), 0)
 
                 box_res_rotate_.extend(np.array(tmp_boxes_r)[inx])
                 score_res_rotate_.extend(np.array(tmp_score_r)[inx])
