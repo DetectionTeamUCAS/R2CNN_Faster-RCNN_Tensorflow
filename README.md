@@ -49,7 +49,7 @@ Some relevant achievements based on this code.
 |[R-FCN](http://papers.nips.cc/paper/6465-r-fcn-object-detection-via-region-based-fully-convolutional-networks)|47.24|79.33|44.26|36.58|53.53|39.38|34.15|47.29|45.66|47.74|65.84|37.92|44.23|47.23|50.64|34.9|
 |[FR-H](https://ieeexplore.ieee.org/abstract/document/7485869/)|60.46|80.32|77.55|32.86|68.13|53.66|52.49|50.04|90.41|75.05|59.59|57|49.81|61.69|56.46|41.85|
 |[This repo](https://github.com/DetectionTeamUCAS/R2CNN_Faster-RCNN_Tensorflow)|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
-|[Current improvement]()|**70.06**|**89.71**|**77.99**|**48.35*|**68.22**|**68.13**|**70.45**|**69.88**|**90.64**|**75.16**|**76.8**|**62.08**|4**59.21**|**73.99**|**70.38**|**49.86**|
+|[Current improvement]()|**70.06**|**89.71**|**77.99**|**48.35**|**68.22**|**68.13**|**70.45**|**69.88**|**90.64**|**75.16**|**76.8**|**62.08**|4**59.21**|**73.99**|**70.38**|**49.86**|
 
 ## Face Detection
 Environment: NVIDIA GeForce GTX 1060
