@@ -95,7 +95,9 @@ python setup.py build_ext --inplace
 
 ## Demo
 
-**Select a configuration file in the folder (libs/configs/) and copy its contents into cfgs.py, then download the corresponding [weights](https://github.com/DetectionTeamUCAS/Models/tree/master/R2CNN_Faster-RCNN_Tensorflow).**      
+**Select a configuration file in the folder (libs/configs/) and copy its contents into cfgs.py, then download the corresponding [weights](https://github.com/DetectionTeamUCAS/Models/tree/master/R2CNN_Faster-RCNN_Tensorflow).** 
+
+### DOTA     
 
 ```   
 python demo_rh.py --src_folder='/PATH/TO/DOTA/IMAGES_ORIGINAL/' 
@@ -103,6 +105,11 @@ python demo_rh.py --src_folder='/PATH/TO/DOTA/IMAGES_ORIGINAL/'
                   --des_folder='/PATH/TO/SAVE/RESULTS/' 
                   --save_res=False
                   --gpu='0'
+```
+
+### FDDB
+```   
+python camera_demo.py --gpu='0'
 ```
 
 ## Eval
