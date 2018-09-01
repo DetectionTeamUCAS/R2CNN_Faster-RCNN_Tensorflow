@@ -1,1 +1,0 @@
-Please download [test images](https://captain-whu.github.io/DOTA/dataset.html), and put it here.
