@@ -1,4 +1,4 @@
-# R2CNN_Attention_Tensorflow
+# R2CNN_Faster_RCNN_Tensorflow
 
 ## Abstract
 This is a tensorflow re-implementation of [R<sup>2</sup>CNN: Rotational Region CNN for Orientation Robust Scene Text Detection](https://arxiv.org/abs/1706.09579).      
