@@ -66,8 +66,7 @@ def inference(det_net, file_paths, des_folder, h_len, w_len, h_overlap, w_overla
     det_boxes_h, det_scores_h, det_category_h, \
     det_boxes_r, det_scores_r, det_category_r = det_net.build_whole_detection_network(input_img_batch=img_batch,
                                                                                       gtboxes_h_batch=None,
-                                                                                      gtboxes_r_batch=None,
-                                                                                      mask_batch=None)
+                                                                                      gtboxes_r_batch=None)
 
     init_op = tf.group(
         tf.global_variables_initializer(),

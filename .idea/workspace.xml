@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df1f92ba-377d-4258-b280-e0c9579e272b" name="Default" comment="" />
+    <list default="true" id="df1f92ba-377d-4258-b280-e0c9579e272b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/demo.py" afterPath="$PROJECT_DIR$/tools/demo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/demo_rh.py" afterPath="$PROJECT_DIR$/tools/demo_rh.py" />
+    </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,13 +37,35 @@
     <favorites_list name="R2CNN_Faster-RCNN_Tensorflow" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file leaf-file-name="demo_rh.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tools/demo_rh.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="185" column="50" selection-start-line="185" selection-start-column="50" selection-end-line="185" selection-end-column="50" />
+            <state relative-caret-position="-8165">
+              <caret line="68" column="106" selection-start-line="68" selection-start-column="106" selection-end-line="68" selection-end-column="106" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/demo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1092">
+              <caret line="295" column="26" selection-start-line="295" selection-start-column="26" selection-end-line="295" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build_whole_network.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/networks/build_whole_network.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="563">
+              <caret line="386" column="8" selection-start-line="386" selection-start-column="8" selection-end-line="386" selection-end-column="8" />
+              <folding>
+                <element signature="e#24#88#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,6 +118,9 @@
       <replace>test_annotation_path</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -131,7 +161,6 @@
         <option value="$PROJECT_DIR$/libs/configs/cfgs_DOTA_v4.py" />
         <option value="$PROJECT_DIR$/tools/demp_rh.py" />
         <option value="$PROJECT_DIR$/libs/box_utils/nms.py" />
-        <option value="$PROJECT_DIR$/tools/demo_rh.py" />
         <option value="$PROJECT_DIR$/tools/inference.py" />
         <option value="$PROJECT_DIR$/tools/eval.py" />
         <option value="$PROJECT_DIR$/tools/train.py" />
@@ -139,9 +168,10 @@
         <option value="$PROJECT_DIR$/libs/networks/mobilenet/mobilenet.py" />
         <option value="$PROJECT_DIR$/tools/camera_demo.py" />
         <option value="$PROJECT_DIR$/libs/networks/build_whole_network.py" />
-        <option value="$PROJECT_DIR$/tools/demo.py" />
         <option value="$PROJECT_DIR$/libs/configs/cfgs_DOTA_v3.py" />
         <option value="$PROJECT_DIR$/libs/configs/cfgs.py" />
+        <option value="$PROJECT_DIR$/tools/demo_rh.py" />
+        <option value="$PROJECT_DIR$/tools/demo.py" />
       </list>
     </option>
   </component>
@@ -182,6 +212,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -216,8 +248,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -588,7 +618,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3026" height="1946" extended-state="7" />
+    <frame x="-13" y="-13" width="3026" height="1946" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19033334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -883,15 +913,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/camera_demo.py" />
-    <entry file="file://$PROJECT_DIR$/libs/networks/build_whole_network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/demo.py" />
     <entry file="file://$PROJECT_DIR$/libs/configs/cfgs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -913,10 +934,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/libs/networks/build_whole_network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="386" column="8" selection-start-line="386" selection-start-column="8" selection-end-line="386" selection-end-column="8" />
+          <folding>
+            <element signature="e#24#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="295" column="26" selection-start-line="295" selection-start-column="26" selection-end-line="295" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tools/demo_rh.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="185" column="50" selection-start-line="185" selection-start-column="50" selection-end-line="185" selection-end-column="50" />
+        <state relative-caret-position="-8165">
+          <caret line="68" column="106" selection-start-line="68" selection-start-column="106" selection-end-line="68" selection-end-column="106" />
           <folding />
         </state>
       </provider>
