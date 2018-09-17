@@ -102,6 +102,8 @@ def eval_with_plac(img_dir, det_net, num_imgs, image_ext, draw_imgs=False):
 
             x_c = x_c * raw_w / resized_w
             y_c = y_c * raw_h / resized_h
+            w = w * raw_w / resized_w
+            h = h * raw_h / resized_h
 
             boxes_h = np.transpose(np.stack([xmin, ymin, xmax, ymax]))
             boxes_r = np.transpose(np.stack([x_c, y_c, w, h, theta]))

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df1f92ba-377d-4258-b280-e0c9579e272b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/demo.py" afterPath="$PROJECT_DIR$/tools/demo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/demo_rh.py" afterPath="$PROJECT_DIR$/tools/demo_rh.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,8 +38,18 @@
       <file leaf-file-name="demo_rh.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tools/demo_rh.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8165">
-              <caret line="68" column="106" selection-start-line="68" selection-start-column="106" selection-end-line="68" selection-end-column="106" />
+            <state relative-caret-position="1456">
+              <caret line="75" column="36" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read_tfrecord.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/io/read_tfrecord.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1508">
+              <caret line="37" column="54" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -51,8 +58,8 @@
       <file leaf-file-name="demo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools/demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1092">
-              <caret line="295" column="26" selection-start-line="295" selection-start-column="26" selection-end-line="295" selection-end-column="26" />
+            <state relative-caret-position="9412">
+              <caret line="185" column="88" selection-start-line="175" selection-start-column="16" selection-end-line="185" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -61,7 +68,7 @@
       <file leaf-file-name="build_whole_network.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/networks/build_whole_network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
+            <state relative-caret-position="20072">
               <caret line="386" column="8" selection-start-line="386" selection-start-column="8" selection-end-line="386" selection-end-column="8" />
               <folding>
                 <element signature="e#24#88#0" expanded="true" />
@@ -213,7 +220,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -246,8 +252,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="R2CNN_Faster-RCNN_Tensorflow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="R2CNN_Faster-RCNN_Tensorflow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="R2CNN_Faster-RCNN_Tensorflow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="R2CNN_Faster-RCNN_Tensorflow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -874,14 +913,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/inference.py" />
     <entry file="file://$PROJECT_DIR$/tools/eval.py" />
-    <entry file="file://$PROJECT_DIR$/data/io/read_tfrecord.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3745">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/train.py" />
     <entry file="file://$PROJECT_DIR$/libs/detection_oprations/anchor_target_layer_without_boxweight.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -936,7 +967,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/networks/build_whole_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
+        <state relative-caret-position="20072">
           <caret line="386" column="8" selection-start-line="386" selection-start-column="8" selection-end-line="386" selection-end-column="8" />
           <folding>
             <element signature="e#24#88#0" expanded="true" />
@@ -944,18 +975,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/io/read_tfrecord.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1508">
+          <caret line="37" column="54" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tools/demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="295" column="26" selection-start-line="295" selection-start-column="26" selection-end-line="295" selection-end-column="26" />
+        <state relative-caret-position="9412">
+          <caret line="185" column="88" selection-start-line="175" selection-start-column="16" selection-end-line="185" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/demo_rh.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8165">
-          <caret line="68" column="106" selection-start-line="68" selection-start-column="106" selection-end-line="68" selection-end-column="106" />
+        <state relative-caret-position="1456">
+          <caret line="75" column="36" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="36" />
           <folding />
         </state>
       </provider>
