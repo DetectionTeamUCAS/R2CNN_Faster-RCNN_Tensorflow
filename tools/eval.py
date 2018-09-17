@@ -18,6 +18,7 @@ from libs.configs import cfgs
 from libs.networks import build_whole_network
 from libs.val_libs import voc_eval, voc_eval_r
 from libs.box_utils import draw_box_in_img
+from libs.box_utils.coordinate_convert import forward_convert, back_forward_convert
 from libs.label_name_dict.pascal_dict import LABEl_NAME_MAP, NAME_LABEL_MAP
 from help_utils import tools
 
@@ -29,7 +30,8 @@ def eval_with_plac(img_dir, det_net, num_imgs, image_ext, draw_imgs=False):
     img_batch = tf.cast(img_plac, tf.float32)
     img_batch = img_batch - tf.constant(cfgs.PIXEL_MEAN)
     img_batch = short_side_resize_for_inference_data(img_tensor=img_batch,
-                                                     target_shortside_len=cfgs.IMG_SHORT_SIDE_LEN)
+                                                     target_shortside_len=cfgs.IMG_SHORT_SIDE_LEN,
+                                                     is_resize=False)
 
     det_boxes_h, det_scores_h, det_category_h, \
     det_boxes_r, det_scores_r, det_category_r = det_net.build_whole_detection_network(
@@ -90,20 +92,20 @@ def eval_with_plac(img_dir, det_net, num_imgs, image_ext, draw_imgs=False):
 
             xmin, ymin, xmax, ymax = det_boxes_h_[:, 0], det_boxes_h_[:, 1], \
                                      det_boxes_h_[:, 2], det_boxes_h_[:, 3]
-            x_c, y_c, w, h, theta = det_boxes_r_[:, 0], det_boxes_r_[:, 1], det_boxes_r_[:, 2], \
-                                    det_boxes_r_[:, 3], det_boxes_r_[:, 4]
 
             resized_h, resized_w = resized_img.shape[1], resized_img.shape[2]
+            det_boxes_r_ = forward_convert(det_boxes_r_, False)
+            det_boxes_r_[:, 0::2] *= (raw_w / resized_w)
+            det_boxes_r_[:, 1::2] *= (raw_h / resized_h)
+            det_boxes_r_ = back_forward_convert(det_boxes_r_, False)
+
+            x_c, y_c, w, h, theta = det_boxes_r_[:, 0], det_boxes_r_[:, 1], det_boxes_r_[:, 2], \
+                                    det_boxes_r_[:, 3], det_boxes_r_[:, 4]
 
             xmin = xmin * raw_w / resized_w
             xmax = xmax * raw_w / resized_w
             ymin = ymin * raw_h / resized_h
             ymax = ymax * raw_h / resized_h
-
-            x_c = x_c * raw_w / resized_w
-            y_c = y_c * raw_h / resized_h
-            w = w * raw_w / resized_w
-            h = h * raw_h / resized_h
 
             boxes_h = np.transpose(np.stack([xmin, ymin, xmax, ymax]))
             boxes_r = np.transpose(np.stack([x_c, y_c, w, h, theta]))
