@@ -4,7 +4,7 @@ from xml.dom.minidom import Document
 import numpy as np
 import copy, cv2
 
-def save_to_xml(save_path, im_width, im_height, objects_axis, label_name):
+def save_to_xml(save_path, im_height, im_width, objects_axis, label_name):
     im_depth = 0
     object_num = len(objects_axis)
     doc = Document()
@@ -188,7 +188,7 @@ def clip_image(file_idx, image, boxes_all, width, height):
                 # print ('boxes_all', boxes_all)
                 # print ('top_left_col', top_left_col, 'top_left_row', top_left_row)
 
-                cond1 = np.intersect1d(np.where(center_y[:]>=0 )[0], np.where(center_x[:]>=0 )[0])
+                cond1 = np.intersect1d(np.where(center_y[:] >=0 )[0], np.where(center_x[:] >=0 )[0])
                 cond2 = np.intersect1d(np.where(center_y[:] <= (bottom_right_row - top_left_row))[0],
                                         np.where(center_x[:] <= (bottom_right_col - top_left_col))[0])
                 idx = np.intersect1d(cond1, cond2)
@@ -224,8 +224,8 @@ max_length = 1
 for idx, img in enumerate(images):
 # img = 'P1524.png'
     print (idx, 'read image', img)
-    img_data = misc.imread(os.path.join(raw_images_dir, img))
-
+    # img_data = misc.imread(os.path.join(raw_images_dir, img))
+    img_data = cv2.imread(os.path.join(raw_images_dir, img))
     # if len(img_data.shape) == 2:
         # img_data = img_data[:, :, np.newaxis]
         # print ('find gray image')

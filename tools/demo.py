@@ -126,7 +126,7 @@ def inference(det_net, file_paths, des_folder, h_len, w_len, h_overlap, w_overla
                         sess.run(
                             [det_boxes_h, det_scores_h, det_category_h,
                              det_boxes_r, det_scores_r, det_category_r],
-                            feed_dict={img_plac: src_img[:, :, ::-1]}
+                            feed_dict={img_plac: src_img}
                         )
 
                     if len(det_boxes_h_) > 0:

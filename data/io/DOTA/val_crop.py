@@ -4,7 +4,7 @@ from xml.dom.minidom import Document
 import numpy as np
 import copy, cv2
 
-def save_to_xml(save_path, im_width, im_height, objects_axis, label_name):
+def save_to_xml(save_path, im_height, im_width, objects_axis, label_name):
     im_depth = 0
     object_num = len(objects_axis)
     doc = Document()
@@ -224,8 +224,8 @@ max_length = 1
 for idx, img in enumerate(images):
     # img = 'P2330.png'
     print (idx, 'read image', img)
-    img_data = misc.imread(os.path.join(raw_images_dir, img))
-
+    # img_data = misc.imread(os.path.join(raw_images_dir, img))
+    img_data = cv2.imread(os.path.join(raw_images_dir, img))
     # if len(img_data.shape) == 2:
         # img_data = img_data[:, :, np.newaxis]
         # print ('find gray image')
