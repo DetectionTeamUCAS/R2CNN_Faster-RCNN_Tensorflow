@@ -9,18 +9,26 @@ This project is based on [Faster-RCNN](https://github.com/DetectionTeamUCAS/Fast
 ## Citation
 Some relevant achievements based on this code.     
 
-    @article{https://ieeexplore.ieee.org/document/8464244 or https://arxiv.org/abs/1806.04828
-        Author = {Xue Yang, Hao Sun, Xian Sun, Menglong Yan, Zhi Guo, Kun Fu},
-        Title = {Position Detection and Direction Prediction for Arbitrary-Oriented Ships via Multitask Rotation Region Convolutional Neural Network},
-        Year = {2018}
-    } 
+    @article{[yang2018position](https://ieeexplore.ieee.org/document/8464244),
+		title={Position Detection and Direction Prediction for Arbitrary-Oriented Ships via Multitask Rotation Region Convolutional Neural Network},
+		author={Yang, Xue and Sun, Hao and Sun, Xian and  Yan, Menglong and Guo, Zhi and Fu, Kun},
+		journal={IEEE Access},
+		volume={6},
+		pages={50839-50849},
+		year={2018},
+		publisher={IEEE}
+	}
     
-    @article{yangxue_r-dfpn:http://www.mdpi.com/2072-4292/10/1/132 or https://arxiv.org/abs/1806.04331
-        Author = {Xue Yang, Hao Sun, Kun Fu, Jirui Yang, Xian Sun, Menglong Yan and Zhi Guo},
-        Title = {{R-DFPN}: Automatic Ship Detection in Remote Sensing Images from Google Earth of Complex Scenes Based on Multiscale Rotation Dense Feature Pyramid Networks},
-        Journal = {Published in remote sensing},
-        Year = {2018}
-    }
+    @article{[yang2018r-dfpn](http://www.mdpi.com/2072-4292/10/1/132),
+		title={Automatic ship detection in remote sensing images from google earth of complex scenes based on multiscale rotation dense feature pyramid networks},
+		author={Yang, Xue and Sun, Hao and Fu, Kun and Yang, Jirui and Sun, Xian and Yan, Menglong and Guo, Zhi},
+		journal={Remote Sensing},
+		volume={10},
+		number={1},
+		pages={132},
+		year={2018},
+		publisher={Multidisciplinary Digital Publishing Institute}
+	} 
 
 ## [DOTA](https://captain-whu.github.io/DOTA/index.html) test results      
 ![1](DOTA.png)
