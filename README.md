@@ -9,9 +9,9 @@ This project is based on [Faster-RCNN](https://github.com/DetectionTeamUCAS/Fast
 ## Citation
 Some relevant achievements based on this code.     
 
-    @article{https://arxiv.org/abs/1806.04828
+    @article{https://ieeexplore.ieee.org/document/8464244 or https://arxiv.org/abs/1806.04828
         Author = {Xue Yang, Hao Sun, Xian Sun, Menglong Yan, Zhi Guo, Kun Fu},
-        Title = {Position Detection and Direction Prediction for Arbitrary-Oriented Ships via Multiscale Rotation Region Convolutional Neural Network},
+        Title = {Position Detection and Direction Prediction for Arbitrary-Oriented Ships via Multitask Rotation Region Convolutional Neural Network},
         Year = {2018}
     } 
     
