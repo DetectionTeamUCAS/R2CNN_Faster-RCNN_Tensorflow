@@ -5,9 +5,10 @@ import xml.dom.minidom
 import numpy as np
 import csv
 import cv2
+import codecs
 
 
-def WriterXMLFiles(filename, path, box_list, w, h, d):
+def WriterXMLFiles(filename, path, box_list, labels, w, h, d):
 
     # dict_box[filename]=json_dict[filename]
     doc = xml.dom.minidom.Document()
@@ -62,11 +63,11 @@ def WriterXMLFiles(filename, path, box_list, w, h, d):
     segname.appendChild(doc.createTextNode("0"))
     root.appendChild(segname)
 
-    for box in box_list:
+    for box, label in zip(box_list, labels):
 
         nodeobject = doc.createElement('object')
         nodename = doc.createElement('name')
-        nodename.appendChild(doc.createTextNode('face'))
+        nodename.appendChild(doc.createTextNode(label))
         nodeobject.appendChild(nodename)
         nodebndbox = doc.createElement('bndbox')
         nodex1 = doc.createElement('x1')
@@ -104,33 +105,24 @@ def WriterXMLFiles(filename, path, box_list, w, h, d):
     fp.close()
 
 
-def load_annoataion(p):
-    '''
-    load annotation from the text file
-    :param p:
-    :return:
-    '''
-    text_polys = []
-    text_tags = []
-    if not os.path.exists(p):
-        return np.array(text_polys, dtype=np.float32)
-    with open(p, 'r') as f:
-        reader = csv.reader(f)
-        for line in reader:
-            label = 'text'
-            # strip BOM. \ufeff for python3,  \xef\xbb\bf for python2
-            line = [i.strip('\ufeff').strip('\xef\xbb\xbf') for i in line]
+def load_annoataion(txt_path):
+    boxes, labels = [], []
+    fr = codecs.open(txt_path, 'r', 'utf-8')
+    lines = fr.readlines()
 
-            x1, y1, x2, y2, x3, y3, x4, y4 = list(map(float, line[:8]))
-            text_polys.append([x1, y1, x2, y2, x3, y3, x4, y4])
-            text_tags.append(label)
+    for line in lines:
+        b = line.strip('\ufeff').strip('\xef\xbb\xbf').strip('$').split(',')[:8]
+        line = list(map(int, b))
+        boxes.append(line)
+        labels.append('text')
 
-        return np.array(text_polys, dtype=np.int32), np.array(text_tags, dtype=np.str)
+    return np.array(boxes), np.array(labels)
+
 
 if __name__ == "__main__":
-    txt_path = r'C:\Users\yangxue\Documents\GitHub\icdar2015\ch4_training_localization_transcription_gt'
-    xml_path = r'C:\Users\yangxue\Documents\GitHub\icdar2015\ch4_xml'
-    img_path = r'C:\Users\yangxue\Documents\GitHub\icdar2015\ch4_training_images'
+    txt_path = '/root/userfolder/yx/idcar2015_txt'
+    xml_path = '/root/userfolder/yx/idcar2015_xml'
+    img_path = '/root/userfolder/yx/idcar2015_img'
     print(os.path.exists(txt_path))
     txts = os.listdir(txt_path)
     for count, t in enumerate(txts):
@@ -138,9 +130,8 @@ if __name__ == "__main__":
         xml_name = t.replace('.txt', '.xml')
         img_name = t.replace('.txt', '.jpg')
         img = cv2.imread(os.path.join(img_path, img_name.split('gt_')[-1]))
-        if img != None:
-            h, w, d = img.shape
-            WriterXMLFiles(xml_name.split('gt_')[-1], xml_path, boxes, labels, w, h, d)
+        h, w, d = img.shape
+        WriterXMLFiles(xml_name.split('gt_')[-1], xml_path, boxes, labels, w, h, d)
 
         if count % 1000 == 0:
             print(count)

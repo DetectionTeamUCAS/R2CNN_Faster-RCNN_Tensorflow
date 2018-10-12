@@ -101,7 +101,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Train a R2CNN network')
     parser.add_argument('--data_dir', dest='data_dir',
                         help='data path',
-                        default='/mnt/USBC/gx/Detection/icdar2015/ch4_test_images/', type=str)
+                        default='./inference_image/', type=str)
     parser.add_argument('--gpu', dest='gpu',
                         help='gpu index',
                         default='0', type=str)
@@ -112,6 +112,7 @@ def parse_args():
 
     args = parser.parse_args()
     return args
+
 
 if __name__ == '__main__':
     args = parse_args()

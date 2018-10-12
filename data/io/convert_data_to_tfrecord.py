@@ -10,13 +10,13 @@ import cv2
 from libs.label_name_dict.label_dict import *
 from help_utils.tools import *
 
-tf.app.flags.DEFINE_string('VOC_dir', '/mnt/USBB/gx/DOTA/DOTA_TOTAL/', 'Voc dir')
-tf.app.flags.DEFINE_string('xml_dir', 'XML', 'xml dir')
-tf.app.flags.DEFINE_string('image_dir', 'IMG', 'image dir')
+tf.app.flags.DEFINE_string('VOC_dir', '/root/userfolder/yx/', 'Voc dir')
+tf.app.flags.DEFINE_string('xml_dir', 'icdar2015_xml', 'xml dir')
+tf.app.flags.DEFINE_string('image_dir', 'icdar2015_img', 'image dir')
 tf.app.flags.DEFINE_string('save_name', 'train', 'save name')
 tf.app.flags.DEFINE_string('save_dir', '../tfrecord/', 'save name')
-tf.app.flags.DEFINE_string('img_format', '.png', 'format of image')
-tf.app.flags.DEFINE_string('dataset', 'DOTA_TOTAL', 'dataset')
+tf.app.flags.DEFINE_string('img_format', '.jpg', 'format of image')
+tf.app.flags.DEFINE_string('dataset', 'ICDAR2015', 'dataset')
 FLAGS = tf.app.flags.FLAGS
 
 
@@ -97,8 +97,8 @@ def convert_pascal_to_tfrecord():
 
         feature = tf.train.Features(feature={
             # do not need encode() in linux
-            # 'img_name': _bytes_feature(img_name.encode()),
-            'img_name': _bytes_feature(img_name),
+            'img_name': _bytes_feature(img_name.encode()),
+            # 'img_name': _bytes_feature(img_name),
             'img_height': _int64_feature(img_height),
             'img_width': _int64_feature(img_width),
             'img': _bytes_feature(img.tostring()),

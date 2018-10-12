@@ -283,26 +283,26 @@ def parse_args():
 
 
 if __name__ == "__main__":
-    # args = parse_args()
-    # print('Called with args:')
-    # print(args)
+    args = parse_args()
+    print('Called with args:')
+    print(args)
 
-    # os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
-    os.environ["CUDA_VISIBLE_DEVICES"] = '1'
+    os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
+    # os.environ["CUDA_VISIBLE_DEVICES"] = '1'
 
-    # file_paths = get_file_paths_recursive(args.src_folder, args.image_ext)
-    #
-    # det_net = build_whole_network.DetectionNetwork(base_network_name=cfgs.NET_NAME,
-    #                                                is_training=False)
-    #
-    # inference(det_net, file_paths, args.des_folder, args.h_len, args.w_len,
-    #            args.h_overlap, args.w_overlap,  args.save_res)
+    file_paths = get_file_paths_recursive(args.src_folder, args.image_ext)
 
-    file_paths = get_file_paths_recursive('/root/userfolder/DOTA/test/', '.png')
     det_net = build_whole_network.DetectionNetwork(base_network_name=cfgs.NET_NAME,
                                                    is_training=False)
-    inference(det_net, file_paths, '/root/userfolder/yx/R2CNN_Attention/tools/demo/', 800, 800,
-              200, 200, False)
+
+    inference(det_net, file_paths, args.des_folder, args.h_len, args.w_len,
+               args.h_overlap, args.w_overlap,  args.save_res)
+    #
+    # file_paths = get_file_paths_recursive('/root/userfolder/DOTA/test/', '.png')
+    # det_net = build_whole_network.DetectionNetwork(base_network_name=cfgs.NET_NAME,
+    #                                                is_training=False)
+    # inference(det_net, file_paths, '/root/userfolder/yx/R2CNN_Attention/tools/demo/', 800, 800,
+    #           200, 200, False)
 
 
 

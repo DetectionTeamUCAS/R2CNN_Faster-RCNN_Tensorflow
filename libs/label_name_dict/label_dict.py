@@ -13,7 +13,7 @@ elif cfgs.DATASET_NAME == 'FDDB':
         'back_ground': 0,
         'face': 1
     }
-elif cfgs.DATASET_NAME == 'icdar':
+elif cfgs.DATASET_NAME == 'ICDAR2015':
     NAME_LABEL_MAP = {
         'back_ground': 0,
         'text': 1
