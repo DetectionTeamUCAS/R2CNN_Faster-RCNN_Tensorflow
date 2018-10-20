@@ -61,7 +61,7 @@ Some relevant achievements based on this code.
 Environment: NVIDIA GeForce GTX 1060    
 ![2](face.gif)   
 
-## IDCAR2015
+## ICDAR2015
 ![3](./tools/inference_results/R2CNN_20181011_ICDAR2015_v1/icdar2015.jpg)   
 
 ## Requirements
