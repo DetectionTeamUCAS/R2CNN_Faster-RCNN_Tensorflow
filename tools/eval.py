@@ -93,11 +93,12 @@ def eval_with_plac(img_dir, det_net, num_imgs, image_ext, draw_imgs=False):
             xmin, ymin, xmax, ymax = det_boxes_h_[:, 0], det_boxes_h_[:, 1], \
                                      det_boxes_h_[:, 2], det_boxes_h_[:, 3]
 
-            resized_h, resized_w = resized_img.shape[1], resized_img.shape[2]
-            det_boxes_r_ = forward_convert(det_boxes_r_, False)
-            det_boxes_r_[:, 0::2] *= (raw_w / resized_w)
-            det_boxes_r_[:, 1::2] *= (raw_h / resized_h)
-            det_boxes_r_ = back_forward_convert(det_boxes_r_, False)
+            if det_boxes_r_.shape[0] != 0:
+                resized_h, resized_w = resized_img.shape[1], resized_img.shape[2]
+                det_boxes_r_ = forward_convert(det_boxes_r_, False)
+                det_boxes_r_[:, 0::2] *= (raw_w / resized_w)
+                det_boxes_r_[:, 1::2] *= (raw_h / resized_h)
+                det_boxes_r_ = back_forward_convert(det_boxes_r_, False)
 
             x_c, y_c, w, h, theta = det_boxes_r_[:, 0], det_boxes_r_[:, 1], det_boxes_r_[:, 2], \
                                     det_boxes_r_[:, 3], det_boxes_r_[:, 4]
