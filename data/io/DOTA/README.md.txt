@@ -1,0 +1,2 @@
+## Note: 
+The way the image is read and written during data processing uses different modules, causing the channel to be inverted. The user can change the two methods into the same way, otherwise you need to pay attention to the input form during the test. The model provided is trained after the image is reversal, so the author is not modified.    
