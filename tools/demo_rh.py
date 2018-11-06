@@ -122,13 +122,13 @@ def inference(det_net, file_paths, des_folder, h_len, w_len, h_overlap, w_overla
                     else:
                         ww_ = ww
                     src_img = img[hh_:(hh_ + h_len), ww_:(ww_ + w_len), :]
-
+                    # Beacuse the channel of the image is reversed when process DOTA dataset, so it is also reversed here.
                     det_boxes_h_, det_scores_h_, det_category_h_, \
                     det_boxes_r_, det_scores_r_, det_category_r_ = \
                         sess.run(
                             [det_boxes_h, det_scores_h, det_category_h,
                              det_boxes_r, det_scores_r, det_category_r],
-                            feed_dict={img_plac: src_img}
+                            feed_dict={img_plac: src_img[:, :, ::-1]}
                         )
 
                     if len(det_boxes_h_) > 0:
