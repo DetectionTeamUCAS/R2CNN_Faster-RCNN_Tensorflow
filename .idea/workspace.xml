@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="df1f92ba-377d-4258-b280-e0c9579e272b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/eval.py" afterPath="$PROJECT_DIR$/tools/eval.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +40,7 @@
       <file leaf-file-name="txt2xml.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/io/ICDAR2015/txt2xml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
+            <state relative-caret-position="5474">
               <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -53,7 +52,7 @@
       <file leaf-file-name="build_whole_network.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/networks/build_whole_network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
+            <state relative-caret-position="1610">
               <caret line="386" column="8" selection-start-line="386" selection-start-column="8" selection-end-line="386" selection-end-column="8" />
               <folding>
                 <element signature="e#876#1047#0" expanded="false" />
@@ -74,18 +73,28 @@
       <file leaf-file-name="resnet.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/networks/resnet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
+            <state relative-caret-position="4324">
               <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eval.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="eval.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools/eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+            <state relative-caret-position="736">
+              <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -104,7 +113,7 @@
       <file leaf-file-name="demo_rh.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools/demo_rh.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
+            <state relative-caret-position="2668">
               <caret line="62" column="62" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="62" />
               <folding />
             </state>
@@ -255,8 +264,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -784,7 +793,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3026" height="1946" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19166666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1003,7 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/train.py" />
     <entry file="file://$PROJECT_DIR$/libs/detection_oprations/anchor_target_layer_without_boxweight.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="728">
@@ -1114,7 +1122,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/networks/resnet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
+        <state relative-caret-position="4324">
           <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
           <folding />
         </state>
@@ -1122,7 +1130,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/io/ICDAR2015/txt2xml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
+        <state relative-caret-position="5474">
           <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -1132,7 +1140,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/networks/build_whole_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
+        <state relative-caret-position="1610">
           <caret line="386" column="8" selection-start-line="386" selection-start-column="8" selection-end-line="386" selection-end-column="8" />
           <folding>
             <element signature="e#876#1047#0" expanded="false" />
@@ -1151,7 +1159,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/demo_rh.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
+        <state relative-caret-position="2668">
           <caret line="62" column="62" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="62" />
           <folding />
         </state>
@@ -1167,8 +1175,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+        <state relative-caret-position="736">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
           <folding />
         </state>
       </provider>

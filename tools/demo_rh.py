@@ -83,8 +83,19 @@ def inference(det_net, file_paths, des_folder, h_len, w_len, h_overlap, w_overla
         if not restorer is None:
             restorer.restore(sess, restore_ckpt)
             print('restore model')
+        
+        if not os.path.exists('./tmp.txt'):
+            fw = open('./tmp.txt', 'w')
+            fw.close()
+
+        fr = open('./tmp.txt', 'r')
+        pass_img = fr.readlines()
+        fr.close()
 
         for count, img_path in enumerate(file_paths):
+            fw = open('./tmp.txt', 'a+')
+            if img_path + '\n' in pass_img:
+                continue
             start = timer()
             img = cv2.imread(img_path)
 
@@ -298,8 +309,11 @@ def inference(det_net, file_paths, des_folder, h_len, w_len, h_overlap, w_overla
                         continue
                     write_handle_h[sub_class].close()
 
-                view_bar('{} cost {}s'.format(img_path.split('/')[-1].split('.')[0],
-                                              time_elapsed), count + 1, len(file_paths))
+            view_bar('{} cost {}s'.format(img_path.split('/')[-1].split('.')[0],
+                                          time_elapsed), count + 1, len(file_paths))
+            fw.write('{}\n'.format(img_path))
+            fw.close()
+        os.remove('./tmp.txt')
 
 
 def parse_args():
