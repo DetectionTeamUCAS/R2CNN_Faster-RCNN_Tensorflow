@@ -101,3 +101,21 @@ ENV/
 .mypy_cache/
 
 .pyc
+.so
+*.data-00000-of-00001
+*.index
+*.meta
+events.*
+checkpoint
+.idea/
+__pycache__/
+*.json
+*.zip
+
+*/tools/demos/*
+*/tools/test_dota/*
+*/tools/test_icdar2015/*
+*/output/*
+*/data/pretrained_weights/*
+*/data/tfrecord/*
+
